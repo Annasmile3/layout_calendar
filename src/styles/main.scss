@@ -1,4 +1,4 @@
-$week: "mon" 0, "tue" 1, "wed" 2, "thu" 3, "fri" 4, "sat" 5, "sun" 6;
+$days: "mon", "tue", "wed", "thu", "fri", "sat", "sun";
 
 @mixin calendar-cell {
   display: block;
@@ -10,6 +10,7 @@ $week: "mon" 0, "tue" 1, "wed" 2, "thu" 3, "fri" 4, "sat" 5, "sun" 6;
   text-align: center;
   background-color: #eee;
   border: 1px solid black;
+  transition: top 0.5s ease-in-out;
 }
 
 * {
@@ -25,11 +26,12 @@ body {
 .calendar {
   display: flex;
   flex-wrap: wrap;
-  max-width: 707px;
+  width: 710px;
   margin: 40px auto 0;
 
   div {
     display: none;
+    cursor: pointer;
   }
 
   @for $i from 28 to 31 {
@@ -44,15 +46,14 @@ body {
     }
   }
 
-  @each $day, $num in $week {
-    &-#{$day} div:first-child {
-      margin-left: #{$num * 100px + $num};
+  @for $i from 1 through 6 {
+    &-#{nth($days, $i)} div:first-child {
+      margin-left: #{$i * 100 + $i - 100}px;
     }
   }
 
   div:hover {
     background-color: pink;
-    cursor: pointer;
     transform: translateY(-20px);
     transition: top 0.5s ease-in-out;
   }
