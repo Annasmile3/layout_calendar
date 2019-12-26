@@ -13,10 +13,11 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 707px;
+  width: 710px;
   margin: 40px auto 0; }
   .calendar div {
-    display: none; }
+    display: none;
+    cursor: pointer; }
   .calendar-28 div:nth-child(-n + 28) {
     display: block;
     height: 100px;
@@ -26,7 +27,9 @@ body {
     line-height: 100px;
     text-align: center;
     background-color: #eee;
-    border: 1px solid black; }
+    border: 1px solid black;
+    -webkit-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out; }
   .calendar-29 div:nth-child(-n + 29) {
     display: block;
     height: 100px;
@@ -36,7 +39,9 @@ body {
     line-height: 100px;
     text-align: center;
     background-color: #eee;
-    border: 1px solid black; }
+    border: 1px solid black;
+    -webkit-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out; }
   .calendar-30 div:nth-child(-n + 30) {
     display: block;
     height: 100px;
@@ -46,7 +51,9 @@ body {
     line-height: 100px;
     text-align: center;
     background-color: #eee;
-    border: 1px solid black; }
+    border: 1px solid black;
+    -webkit-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out; }
   .calendar div:nth-child(1)::before {
     content: "1"; }
   .calendar div:nth-child(2)::before {
@@ -108,22 +115,19 @@ body {
   .calendar div:nth-child(30)::before {
     content: "30"; }
   .calendar-mon div:first-child {
-    margin-left: 0px; }
+    margin-left: 1px; }
   .calendar-tue div:first-child {
-    margin-left: 101px; }
+    margin-left: 102px; }
   .calendar-wed div:first-child {
-    margin-left: 202px; }
+    margin-left: 203px; }
   .calendar-thu div:first-child {
-    margin-left: 303px; }
+    margin-left: 304px; }
   .calendar-fri div:first-child {
-    margin-left: 404px; }
+    margin-left: 405px; }
   .calendar-sat div:first-child {
-    margin-left: 505px; }
-  .calendar-sun div:first-child {
-    margin-left: 606px; }
+    margin-left: 506px; }
   .calendar div:hover {
     background-color: pink;
-    cursor: pointer;
     -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
     -webkit-transition: top 0.5s ease-in-out;
