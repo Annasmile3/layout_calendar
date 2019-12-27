@@ -148,6 +148,8 @@ body {
     margin-left: 405px; }
   .calendar-sat div:first-child {
     margin-left: 506px; }
+  .calendar-sun div:first-child {
+    margin-left: 607px; }
   .calendar div:hover {
     background-color: pink;
     -webkit-transform: translateY(-20px);
