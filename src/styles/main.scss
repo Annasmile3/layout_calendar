@@ -46,7 +46,7 @@ body {
     }
   }
 
-  @for $i from 1 through 6 {
+  @for $i from 1 through 7 {
     &-#{nth($days, $i)} div:first-child {
       margin-left: #{$i * 100 + $i - 100}px;
     }
